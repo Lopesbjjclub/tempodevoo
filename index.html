@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L0PES FLY TEMPO de Voo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator-card">
+            <h1><i class="fas fa-plane-departure"></i> L0PES FLY TEMPO de Voo</h1>
+            
+            
+            <div class="input-group">
+                <div class="input-field">
+                    <label for="origem">
+                        <i class="fas fa-plane-departure"></i> Aeroporto de Origem:
+                    </label>
+                    <input type="text" id="origem" placeholder="Insira o código ICAO/IATA do aeroporto">
+                    <div class="airport-suggestions" id="origem-suggestions"></div>
+                </div>
+
+                <div class="input-field">
+                    <label for="destino">
+                        <i class="fas fa-plane-arrival"></i> Aeroporto de Destino:
+                    </label>
+                    <input type="text" id="destino" placeholder="Insira o código ICAO/IATA do aeroporto">
+                    <div class="airport-suggestions" id="destino-suggestions"></div>
+                </div>
+
+                <div class="input-field">
+                    <label for="decolagem">
+                        <i class="far fa-clock"></i> Horário de Decolagem (Local):
+                    </label>
+                    <input type="datetime-local" id="decolagem">
+                </div>
+
+                <div class="input-field">
+                    <label for="aeronave">
+                        <i class="fas fa-plane"></i> Aeronave:
+                    </label>
+                    <select id="aeronave" onchange="updateAircraftInfo()">
+                        <option value="" disabled selected>Selecione a aeronave</option>
+                        <option value="A-29">A-29 Super Tucano</option>
+                        <option value="T-27">T-27 Tucano</option>
+                        <option value="T-25">T-25 Universal</option>
+                        <option value="VC-1A">VC-1A (Airbus A319)</option>
+                        <option value="VC-2">VC-2 (Embraer 190)</option>
+                        <option value="P-95">P-95 Bandeirante Patrulha</option>
+                        <option value="C-97">C-97 Brasília</option>
+                        <option value="VC-35">VC-35 (Gulfstream IV)</option>
+                        <option value="VC-99">VC-99 (Embraer ERJ-145)</option>
+                        <option value="U-100">U-100 (Hawker 800)</option>
+                        <option value="C-98">C-98 (Cessna 208 Caravan)</option>
+                        <option value="C-105A">C-105A (CASA C-295)</option>
+                        <option value="KC-390">KC-390 Millennium</option>
+                        <option value="KC-30">KC-30 (Airbus A330 MRTT)</option>
+                        <option value="H-4B">H-4B (Sikorsky UH-60 Black Hawk)</option>
+                        <option value="VH-35">VH-35 (Bell 206 JetRanger)</option>
+                        <option value="VH-36">VH-36 (Eurocopter EC135)</option>
+                        <option value="H-50">H-50 (Bell 206B JetRanger III)</option>
+                        <option value="H-60L">H-60L (Sikorsky UH-60L Black Hawk)</option>
+                    </select>
+                </div>
+                
+                <div class="info-card" id="aircraft-info" style="display: none;">
+                    <div class="capacity-info">
+                        <i class="fas fa-weight"></i>
+                        <span id="capacity">Capacidade: -</span>
+                    </div>
+                </div>
+                
+
+            </div>
+
+            <div class="info-card" id="flight-info">
+                <div class="distance-info">
+                    <i class="fas fa-route"></i>
+                    <span id="distance">-</span>
+                </div>
+                <div class="duration-info">
+                    <i class="fas fa-clock"></i>
+                    <span id="duration">-</span>
+                </div>
+            </div>
+
+            <button onclick="calcularHorario()">
+                <i class="fas fa-calculator"></i> Calcular Horário de Chegada
+            </button>
+
+            <div id="resultado" class="resultado-card hidden">
+                <h2><i class="fas fa-info-circle"></i> Previsão de Chegada</h2>
+                <div class="tempo-info">
+                    <div id="hora-zulu" class="zulu-time"></div>
+                    <div id="hora-local" class="local-time"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <DIV>
+     
+    </DIV>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
