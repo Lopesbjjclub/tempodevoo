@@ -1,6 +1,6 @@
 
 
-const apiKey = 'AIzaSyDW-J8prQrqobTyuprJNSu-jYHWuNVgCcg'; // Insira sua chave API do Google Maps aqui
+const apiKey = ''; // Insira sua chave API do Google Maps aqui
 
 // Base de dados de aeroportos (exemplo simplificado - você pode expandir isso)
 const airports = {
@@ -60,7 +60,13 @@ const airports = {
     'SBFL': { name: 'Aeroporto Internacional de Florianópolis', lat: -27.6703, lng: -48.5478 },
     'SBGP': { name: 'Aeroporto de Viracopos (Campinas)', lat: -23.0074, lng: -47.1345 },
     'SBMN': { name: 'Aeroporto de MANAUS', lat: -3.1418, lng: -59.9863 },
-    'SBSC': { name: 'BASE AÉREA DE SANTA CRUZ', lat: -22.9320, lng: -43.7195 }
+    'SBSC': { name: 'BASE AÉREA DE SANTA CRUZ', lat: -22.9320, lng: -43.7195 },
+    'SBLS': { nome: 'Base Aérea de Lagoa Santa', lat: -19.6611, lng: -43.8978 },
+    'SBAF': { nome: 'Base Aérea dos Afonsos', lat: -22.8756, lng: -43.3844 },
+    'SBCG': { name: 'Base Aérea de Campo Grande', lat: -20.4687, lng: -54.6725 }
+
+
+
 
 };
 
@@ -214,6 +220,7 @@ const aircrafts = {
     "T-25": { speed: 280, capacity: 500 }, // T-25 Universal
     "VC-1A": { speed: 828, capacity: 19000 }, // VC-1A (Airbus A319)
     "VC-2": { speed: 850, capacity: 13000 }, // VC-2 (Embraer 190)
+    "C-95": { speed: 370, capacity: 2500 }, // P-95 Bandeirante Patrulha
     "P-95": { speed: 370, capacity: 2500 }, // P-95 Bandeirante Patrulha
     "C-97": { speed: 520, capacity: 5700 }, // C-97 Brasília
     "VC-35": { speed: 850, capacity: 2500 }, // VC-35 (Gulfstream IV)
