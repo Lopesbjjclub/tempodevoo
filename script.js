@@ -55,6 +55,7 @@ const airports = {
     'SBRJ': { name: 'Aeroporto Santos Dumont', lat: -22.9116, lng: -43.1631 },
     'SBSC': { name: 'BASE AÉREA DE SANTA CRUZ', lat: -22.9320, lng: -43.7195 },
     'SBSJ': { name: 'Aeroporto Internacional de São José dos Campos', lat: -23.2282, lng: -45.8613 },
+    'SBSM': { name: 'Aeroporto de Santa Maria', lat: -29.6847, lng: -53.8061 },
     'SBSV': { name: 'Aeroporto Internacional de Salvador', lat: -12.9086, lng: -38.3225 },
     'SBSP': { name: 'Aeroporto de Congonhas', lat: -23.6261, lng: -46.6564 },
     'SBTE': { name: 'Aeroporto de Teresina', lat: -5.0599, lng: -42.8235 },
